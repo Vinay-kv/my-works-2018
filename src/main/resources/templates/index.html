@@ -2,9 +2,10 @@
 <html xmlns:th="http://www.thymeleaf.org" data-ng-app="expdMngtApp">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-<title>Index</title>
-
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<title>Homepage</title>
+<link rel="icon" href="images/money-bag.png" />
 <!-- External styles -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -13,6 +14,7 @@
 <link rel="stylesheet"
 	href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.css" />
 <!-- Internal Styles -->
+<link rel="stylesheet" href="styles/index.css"/>
 
 <!-- External Scripts -->
 <script
@@ -46,7 +48,8 @@
 </head>
 <body data-ng-controller="indexController">
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark  sticky-top">
-		<a class="navbar-brand" href="#">Navbar</a>
+		<a class="navbar-brand" href="#"><img src="images/money-bag.png"
+			width="40" height="40" class="d-inline-block align-top" alt="" />Home</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -55,21 +58,24 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav ml-auto">
-				<li class="nav-item active"><a class="nav-link" href="#">Home
+				<!-- <li class="nav-item active"><a class="nav-link" href="#">Home
 						<span class="sr-only">(current)</span>
-				</a></li>
+				</a></li> -->
 				<li class="nav-item"><a class="nav-link" href="#">Register</a></li>
 				<li class="nav-item"><a class="nav-link " href="#">Login</a></li>
 			</ul>
 		</div>
 	</nav>
 
-	<md-content> <md-card class="bg-secondary"> <md-icon
-		md-svg-src="images/money-bag.svg" aria-label="android "></md-icon> <md-card-title>
-	<md-card-title-text> <span
-		class="md-headline text-light">About this app</span> </md-card-title-text> </md-card-title> <md-card-content
-		class="text-light"> <md-card class="bg-info">
-	<md-card-title> <md-card-title-text>
+	<md-content> <md-card class="bg-secondary"> <md-card-title>
+	<md-card-title-text>
+	<div layout="row" layout-align="space-between center">
+		<span class="md-headline text-light ml-md-5 ml-xs-1">About App</span> <img
+			src="images/money-bag.png" class="rounded mr-md-5 mr-xs-1"
+			style="width: 200px; height: 125px" />
+	</div>
+	</md-card-title-text> </md-card-title> <md-card-content class="text-light text-justify"> <md-card
+		class="bg-info"> <md-card-title> <md-card-title-text>
 	<span class="md-headline text-light">Reasons to build</span> </md-card-title-text> </md-card-title> <md-card-content
 		class="text-light">
 	<ul>
@@ -80,7 +86,7 @@
 	</md-card-content> </md-card> <md-card class="bg-info"> <md-card-title> <md-card-title-text>
 	<span class="md-headline text-light">Who can use</span> </md-card-title-text> </md-card-title> <md-card-content
 		class="text-light">
-	<p>App is usefull for students, bachelor or any people who are
+	<p>App is usefull for students, bachelors or any people who are
 		living in shared house, where every individual in a house has to
 		maintain database of what all expenditures he/she has done on shared
 		resources and settle the amount on equal basis at certain intervals of
@@ -114,8 +120,22 @@
 			</ul>
 		</li>
 	</ol>
-
 	</md-card-content> </md-card> </md-card-content> </md-card> </md-content>
+
+	<!--Footer-->
+	<footer class="bg-dark footer">
+		<div class="d-flex justify-content-center">
+			<a href="https://www.linkedin.com/in/vinay-thimbali-k-v-b9827bba/"
+				target="_blank" class="p-2"> <md-icon
+					md-svg-src="images/linkedin.svg"></md-icon></a> <a
+				href="https://www.facebook.com/vinay.kv.18" class="p-2"
+				target="_blank"> <md-icon md-svg-src="images/facebook.svg"></md-icon></a>
+			<a href="https://www.facebook.com/vinay.kv.18" target="_blank"
+				class="p-2"> <md-icon md-svg-src="images/instagram.svg"></md-icon></a>
+		</div>
+		<p class="text-center text-light">© 2018 Copyright: vinay</p>
+	</footer>
+	<!--/.Footer-->
 
 </body>
 </html>
