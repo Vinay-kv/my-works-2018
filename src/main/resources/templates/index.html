@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" data-ng-app="expdMngtApp">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Index</title>
 
 <!-- External styles -->
@@ -9,7 +9,8 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	crossorigin="anonymous" />
-
+<link rel="stylesheet"
+	href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.css" />
 <!-- Internal Styles -->
 
 <!-- External Scripts -->
@@ -26,21 +27,94 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
 	integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 	crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+<!-- Angular Material Library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-aria.min.js"></script>
 
 <!-- 	Internal Scripts -->
 <script src="scripts/app.js" th:href="@{/scripts/app.js}"></script>
-<script src="scripts/index_controller.js" th:href="@{/scripts/index_controller.js}"></script>
+<script src="scripts/index_controller.js"
+	th:href="@{/scripts/index_controller.js}"></script>
 
 </head>
 <body data-ng-controller="indexController">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-4">{{heading}}</div>
-			<div class="col-sm-4">Expenditure App</div>
-			<div class="col-sm-4">--</div>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark  sticky-top">
+		<a class="navbar-brand" href="#">Navbar</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active"><a class="nav-link" href="#">Home
+						<span class="sr-only">(current)</span>
+				</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Register</a></li>
+				<li class="nav-item"><a class="nav-link " href="#">Login</a></li>
+			</ul>
 		</div>
-	</div>
+	</nav>
+
+	<md-content> <md-card class="bg-secondary"> <md-icon
+		md-svg-src="images/money-bag.svg" aria-label="android "></md-icon> <md-card-title>
+	<md-card-title-text> <span
+		class="md-headline text-light">About this app</span> </md-card-title-text> </md-card-title> <md-card-content
+		class="text-light"> <md-card class="bg-info">
+	<md-card-title> <md-card-title-text>
+	<span class="md-headline text-light">Reasons to build</span> </md-card-title-text> </md-card-title> <md-card-content
+		class="text-light">
+	<ul>
+		<li>Improve my Web App building capability</li>
+		<li>Use my knowledge and skills to bulid something which can be
+			used by someone</li>
+	</ul>
+	</md-card-content> </md-card> <md-card class="bg-info"> <md-card-title> <md-card-title-text>
+	<span class="md-headline text-light">Who can use</span> </md-card-title-text> </md-card-title> <md-card-content
+		class="text-light">
+	<p>App is usefull for students, bachelor or any people who are
+		living in shared house, where every individual in a house has to
+		maintain database of what all expenditures he/she has done on shared
+		resources and settle the amount on equal basis at certain intervals of
+		time(for eg, monthly, querterly, etc.,)</p>
+
+	</md-card-content> </md-card> <md-card class="bg-info"> <md-card-title> <md-card-title-text>
+	<span class="md-headline text-light">How to use</span> </md-card-title-text> </md-card-title> <md-card-content
+		class="text-light">
+	<ol type="1">
+		<li>Registration
+			<ul>
+				<li>Any one individual from the group has to create a database
+					where all expenditures are stored</li>
+				<li>Then he has to share the database name with all the group
+					members</li>
+				<li>Now every group individual has to register for the
+					application(For registration database name is required)</li>
+			</ul>
+		</li>
+		<li>Login
+			<ul>
+				<li>Now member can login to the application using login
+					credentials(credentials include database name)</li>
+			</ul>
+		</li>
+		<li>Use
+			<ul>
+				<li>Now can add the expenditure</li>
+				<li>Can see other members expenditures</li>
+				<li>And some more operations are provided</li>
+			</ul>
+		</li>
+	</ol>
+
+	</md-card-content> </md-card> </md-card-content> </md-card> </md-content>
 
 </body>
 </html>

@@ -1,4 +1,4 @@
-var expdMngtApp = angular.module('expdMngtApp', [ 'ngRoute' ]);
+var expdMngtApp = angular.module('expdMngtApp', [ 'ngRoute', 'ngMaterial' ]);
 
 
 
